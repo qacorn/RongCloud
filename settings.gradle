@@ -1,2 +1,6 @@
-include ':app', ':IMLib', ':IMKit', ':CallLib', ':CallKit'
+include ':app'
+include ':CallKit'
+include ':CallLib'
+include ':IMKit'
+include ':IMLib'
 rootProject.name='RongCloud'
