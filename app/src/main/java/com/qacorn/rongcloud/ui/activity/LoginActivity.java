@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.qacorn.rongcloud.R;
+import com.qacorn.rongcloud.manager.IntentManager;
 import com.qacorn.rongcloud.ui.widget.ClearWriteEditText;
 
 import org.json.JSONException;
@@ -44,6 +45,7 @@ public class LoginActivity extends StandardActivity implements View.OnClickListe
     @Override
     protected void registerClickListener() {
         findViewById(R.id.de_login_sign).setOnClickListener(this);
+        findViewById(R.id.de_login_register).setOnClickListener(this);
     }
 
     @Override
@@ -87,6 +89,9 @@ public class LoginActivity extends StandardActivity implements View.OnClickListe
 
                     }
                 });
+                break;
+            case R.id.de_login_register:
+                IntentManager.goRegister(this);
                 break;
         }
     }
